@@ -7,7 +7,15 @@
  * @example [3,2,3] -> 3
 */
 function problem(numbers) {
-    return null;
+    numbers.sort((a, b) => a - b);
+
+  const l = numbers.length;
+
+  if (l % 2 === 0) {
+    return numbers[l / 2]
+  } else {
+    return numbers[(l - 1) / 2]
+  }
 }
 
 const tests = [

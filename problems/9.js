@@ -7,7 +7,12 @@
  * @example [{name: "Chase", grade: 89}, {name: "Raman", grade: 92}, {name: "Peter", grade: 100}] -> ["Peter", "Raman"]
 */
 function problem(students) {
-    return null;
+    const arr = [];
+    let ninety = students.filter(c => c.grade > 90);
+    for (let i = 0; i < ninety.length; i++) {
+        arr.push(ninety[i]["name"]);
+      }
+    return arr.sort();
 }
 
 const tests = [
